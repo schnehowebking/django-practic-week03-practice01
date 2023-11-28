@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <section>
+      <div>
+        <h1>Welcome to Django template Filter and context</h1>
+
+        <div>
+          <h2>Showing context from backend</h2>
+          <p>{{name}}</p>
+          <p>{{age}}</p>
+          <p>{{fvS}}</p>
+          <p>{{clg}}</p>
+         
+        </div>
+
+        <hr/>
+
+        <div>
+          <h2>Built-in Django Template Filters</h2>
+
+          <ol>
+            <li><h3>Join Filter</h3>
+              <p>{{fvS|join:"-"}}</p>
+            </li>
+            <li>
+              <h3>Date Filter</h3>
+              <p>{{date| date:"D d M Y"}}</p>
+            </li>
+            <li>
+              <h3>Default Filter</h3>
+              <p>{{"" | default:"an empty string" }}</p>
+            </li>
+            <li>
+              <h3>Add Filter</h3>
+              <p>{{age | add:"5" }}</p>
+            </li>
+            <li>
+              <h3>Capfirst Filter</h3>
+              <p>{{'django' | capfirst}}</p>
+            </li>
+            <li>
+              <h3>Cut Filter</h3>
+              <p>{{"Python And Django is Fun" | cut:" "}}</p>
+            </li>
+            <li>
+              <h3>Dictsort Filter</h3>
+              <p>{{ dics | dictsort:"name"}}</p>
+              <p>{{ dics | dictsort:"age"}}</p>
+            </li>
+            <li>
+              <h3>Escape Filter</h3>
+              {{ escap | escape }}
+            </li>
+            <li>
+              <h3>First Filter</h3>
+              <p>{{ fvS | first }}</p>
+            </li>
+            <li>
+              <h3>Last Filter</h3>
+              <p>{{ fvS | last}}</p>
+            </li>
+            <li>
+              <h3>Length Filter</h3>
+              <p>{{ fvS | length}}</p>
+            </li>
+            
+            <li>
+              <h3>Linenumbers Filter</h3>
+              <p>{{ line | linenumbers }}</p>
+            </li>
+            
+            
+            <li>
+              <h3>Lower Filter</h3>
+              <p>{{ name | lower }}</p>
+            </li>
+
+            <li>
+              <h3>Upper Filter</h3>
+              <p>{{ name | upper }}</p>
+            </li>
+
+            <li>
+              <h3>Title Filter</h3>
+              <p>{{ clg | title }}</p>
+            </li>
+            
+
+            <li>
+              <h3>Random Filter</h3>
+              <p>{{ fvS | random }}</p>
+            </li>
+
+            <li>
+              <h3>Slice Filter</h3>
+              <p>{{ slicees | slice:":50" }}</p>
+            </li>
+
+
+            <li>
+              <h3>Time Filter</h3>
+              <p>{{ date | time:"H:i" }}</p>
+            </li>
+
+
+            <li>
+              <h3>Timesince Filter</h3>
+              <p>{{ date | timesince }}</p>
+            </li>
+
+
+            <li>
+              <h3>Truncatechars Filter</h3>
+              <p>{{ slicees | truncatechars:50 }}</p>
+            </li>
+
+
+            <li>
+              <h3>Wordcount Filter</h3>
+              <p>{{ slicees | wordcount }}</p>
+            </li>
+
+            <li>
+              <h3>Truncatewords Filter</h3>
+              <p>{{ slicees | truncatewords:2 }}</p>
+            </li>
+
+            <li>
+              <h3>Striptags Filter</h3>
+              <p>{{ escap | striptags}}</p>
+            </li>
+
+            <li>
+              <h3>Pluralize Filter</h3>
+              <p>You have {{ num_tomato }} tomato {{ num_tomato | pluralize:"es" }}.</p>
+            </li>
+
+            <li>
+              <h3>Make_list Filter</h3>
+              <p>{{ name | make_list }}</p>
+            </li>
+            
+          </ol>
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
